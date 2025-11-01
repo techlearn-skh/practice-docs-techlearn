@@ -1,0 +1,118 @@
+EC2, IAM (roles, policies,service linked roles for lambda, ECS), AWS CLI.
+AWS Elastic beanstalk. 
+RDS MySql, PostGresSQL
+AWS Secret Manager.
+
+S3.
+
+
+ECS - Fargate, EKS,
+AWS Lambda, DynamoDB, SNS triggers
+
+AWS cloud watch, 
+
+SNS, SQS
+
+Learning Path (Recommended Order)
+
+	S3 → EC2 → RDS → IAM (foundation)
+
+	Elastic Beanstalk → CloudWatch
+
+	ECS or EKS → API Gateway → Lambda
+
+	SQS/SNS → DynamoDB → Secrets Manager
+
+	CI/CD → CloudFormation/CDK
+
+	Advanced (MSK, X-Ray, WAF, etc.)
+
+Tools & SDKs You’ll Actually Use as a Java Dev
+
+	AWS SDK for Java v2
+
+	Spring Cloud AWS (for seamless integration)
+
+	AWS CLI (to automate tasks)
+
+	Terraform / AWS CDK (for IaC)
+
+	Docker (for ECS/EKS)
+
+
+
+-----------------------------------------------------------------
+Core Services (Must Learn)
+1. Compute Services
+	AWS Lambda: Serverless Java functions (perfect for microservices, APIs)
+
+	AWS Fargate: Serverless containers for Spring Boot apps
+
+	Amazon EC2: Traditional VM deployment
+
+	Elastic Beanstalk: PaaS for easy Java app deployment
+
+2. Database Services
+	Amazon RDS: Managed relational databases (PostgreSQL, MySQL) for Spring apps
+
+	Amazon DynamoDB: NoSQL for high-performance applications
+
+	Amazon Aurora: High-performance MySQL/PostgreSQL compatible
+
+3. Storage Services
+	Amazon S3: Object storage for files, images, backups
+
+	Amazon EBS: Block storage for EC2 instances
+
+🥈 Application Development Services
+4. API & Application Services
+	Amazon API Gateway: REST APIs for your Lambda/EC2 applications
+
+	AWS App Runner: Fully managed container deployment
+
+	Elastic Load Balancing: Distribute traffic to your Java apps
+
+	5. Messaging & Event-Driven Architecture
+	Amazon SQS: Message queuing for decoupled microservices
+
+	Amazon SNS: Pub/Sub messaging
+
+	Amazon EventBridge: Event bus for event-driven applications
+
+🥉 Developer Tools & DevOps
+6. Development & Deployment
+	AWS SDK for Java 2.x: Programmatic access to AWS services
+
+	AWS CodeBuild: Build your Java applications
+
+	AWS CodeDeploy: Automated deployments
+
+	AWS CodePipeline: CI/CD pipelines
+
+	AWS CloudFormation: Infrastructure as Code
+
+	7. Monitoring & Debugging
+	AWS X-Ray: Distributed tracing for microservices
+
+	Amazon CloudWatch: Logging and monitoring
+
+	AWS CloudTrail: API activity monitoring
+
+🎯 Java-Specific AWS Integratio
+
+---------------------------------------------
+VPC:
+ Internet Gate Ways IGW.
+ Route Tables.
+ NACl - Network Access Control Lists. NACLs are stateless. NACL always applied on subnet level.
+ Subnets. [1 subnet === 1 Availability Zone]
+ Firewall Security Groups.
+
+
+-------------------------------------
+
+
+
+
+
+
