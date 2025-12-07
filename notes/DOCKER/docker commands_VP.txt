@@ -1,0 +1,72 @@
+$ docker build -t retry-producer-img .       at the end of the line dot . is important.	If new .jar file generated then run this command.
+
+$ docker images  you will see created docker image.
+
+
+$ docker run -d  --name<anyName>  -p <Own_PORT>:<SB_PORT>  -v "<windowsAnypath>":<WORKDIR>/<SB_logsFolder>  retry-producer-img
+
+$ docker run -d  --name retry-producer  -p 9001:9001  -v "C:/Users/Dell/logs":/u01/applications/logs  retry-producer-img
+
+Below if you have ENV variables in application.yaml file: “-e” options represents ENVIRONMENT variable.
+$ docker run -d -e SERVER_PORT=9001 --name retry-producer  -p 9001:9001  -v "C:/Users/Dell/logs":/u01/applications/logs  retry-producer-img
+
+
+$ docker logs -f retry-producer-cntnr  to see live logs from container.
+
+$ docker container ls      We can check the docker container id.
+	$ docker exec -it 4fe2d3d7d22b bash     if you want to go inside of container use this command.
+$ ls logs/
+
+
+How to remove all docker containers at once
+$ docker stop $(docker ps -aq) && docker rm $(docker ps -aq)
+
+$ docker stop containerID
+
+How to remove all docker images at once
+$ docker rmi $(docker images -a -q)
+
+Check: 
+$ docker container ls
+$ docker images
+
+
+Now run docker compose by using below command.
+$ docker-compose up -d
+
+===============================================================
+$ docker run -p 3306:3306 --name mydb -d -e MYSQL_ROOT_PASSWORD=kamal mysql:8.0.44-debian
+$ docker  exec   -it  mydb  bash
+$ mysql -u root -p
+Mysql> show databases;
+mysql> use mysql
+
+> drop table employees;
+> commit;
+ 
+> insert into employees values(1, null, 'skh', 123.45, true);
+Now go to Spring boot application and start it.
+	
+	
+	
+	select ee1_0.emp_id,ee1_0.emp_doj,ee1_0.emp_name,ee1_0.emp_salary,ee1_0.is_permanent_emp from employees ee1_0 where ee1_0.emp_id=?
+
+	insert into employees values(1, null, 'skh', 123.45, true);
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
